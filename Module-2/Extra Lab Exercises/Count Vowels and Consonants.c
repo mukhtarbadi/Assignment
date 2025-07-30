@@ -1,3 +1,5 @@
+//Write a C program that counts the number of vowels, consonants, digits, and special characters in a given string.
+
 #include <stdio.h>
 #include <ctype.h>
 
@@ -20,7 +22,7 @@ int main() {
                 consonants++;
         } else if (isdigit(ch)) {
             digits++;
-        } else if (!isspace(ch)) {  // exclude spaces from special characters
+        } else if (!isspace(ch)) {
             special++;
         }
         i++;
