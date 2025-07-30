@@ -4,29 +4,22 @@ int main() {
     int a, b, c;
     int largestFlag = 0, smallestFlag = 0;
 
-    // Input three numbers
     printf("Enter three integers: ");
     scanf("%d %d %d", &a, &b, &c);
 
-    // ===== Using if-else to determine flags =====
-
-    // Determine the largest
     if (a >= b && a >= c)
-        largestFlag = 1;  // a is largest
+        largestFlag = 1;
     else if (b >= a && b >= c)
-        largestFlag = 2;  // b is largest
+        largestFlag = 2;
     else
-        largestFlag = 3;  // c is largest
+        largestFlag = 3;
 
-    // Determine the smallest
     if (a <= b && a <= c)
-        smallestFlag = 1;  // a is smallest
+        smallestFlag = 1;
     else if (b <= a && b <= c)
-        smallestFlag = 2;  // b is smallest
+        smallestFlag = 2;
     else
-        smallestFlag = 3;  // c is smallest
-
-    // ===== Using switch-case to display results =====
+        smallestFlag = 3;
 
     printf("\n");
 
