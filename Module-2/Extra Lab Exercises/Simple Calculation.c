@@ -8,38 +8,37 @@ int main() {
     scanf("%lf", &num1);
 
     printf("Enter an operator (+, -, *, /, %%): ");
-    scanf(" %c", &operator);  // Note the space before %c to catch stray newline characters
+    scanf(" %c", &operator);  // Space to handle newline
 
     printf("Enter second number: ");
     scanf("%lf", &num2);
 
+    printf("\n");
+
     switch (operator) {
         case '+':
-            printf("Result: %.2lf\n", num1 + num2);
+            printf("%.2lf + %.2lf = %.2lf\n", num1, num2, num1 + num2);
             break;
         case '-':
-            printf("Result: %.2lf\n", num1 - num2);
+            printf("%.2lf - %.2lf = %.2lf\n", num1, num2, num1 - num2);
             break;
         case '*':
-            printf("Result: %.2lf\n", num1 * num2);
+            printf("%.2lf * %.2lf = %.2lf\n", num1, num2, num1 * num2);
             break;
         case '/':
-            if (num2 == 0) {
+            if (num2 == 0)
                 printf("Error: Division by zero is not allowed.\n");
-            } else {
-                printf("Result: %.2lf\n", num1 / num2);
-            }
+            else
+                printf("%.2lf / %.2lf = %.2lf\n", num1, num2, num1 / num2);
             break;
         case '%':
-            if ((int)num2 == 0) {
+            if ((int)num2 == 0)
                 printf("Error: Modulus by zero is not allowed.\n");
-            } else {
-                printf("Result: %d\n", (int)num1 % (int)num2);
-            }
+            else
+                printf("%d %% %d = %d\n", (int)num1, (int)num2, (int)num1 % (int)num2);
             break;
         default:
             printf("Error: Invalid operator.\n");
-            break;
     }
 
     return 0;
