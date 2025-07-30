@@ -1,7 +1,8 @@
+//Write a C program to calculate factorial using both recursion and iteration, and compare their execution time.
+
 #include <stdio.h>
 #include <time.h>
 
-// Recursive factorial function
 unsigned long long factorial_recursive(int n) {
     if (n == 0 || n == 1)
         return 1;
@@ -9,7 +10,6 @@ unsigned long long factorial_recursive(int n) {
         return n * factorial_recursive(n - 1);
 }
 
-// Iterative factorial function
 unsigned long long factorial_iterative(int n) {
     unsigned long long result = 1;
     for (int i = 2; i <= n; i++) {
@@ -26,13 +26,11 @@ int main() {
     printf("Enter a number to calculate factorial: ");
     scanf("%d", &number);
 
-    // Measure recursive factorial time
     start = clock();
     unsigned long long fact_rec = factorial_recursive(number);
     end = clock();
     time_recursive = ((double)(end - start)) / CLOCKS_PER_SEC;
 
-    // Measure iterative factorial time
     start = clock();
     unsigned long long fact_itr = factorial_iterative(number);
     end = clock();
