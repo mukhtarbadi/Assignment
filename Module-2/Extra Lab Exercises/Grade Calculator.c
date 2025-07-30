@@ -11,7 +11,7 @@ int main() {
     }
 
     switch (marks / 10) {
-        case 10:  // for marks = 100
+        case 10:
         case 9:
             printf("Grade: A\n");
             break;
