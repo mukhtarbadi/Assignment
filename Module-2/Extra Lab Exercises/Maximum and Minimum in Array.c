@@ -10,7 +10,6 @@ int main() {
         scanf("%d", &arr[i]);
     }
 
-    // Find max and min
     max = arr[0];
     min = arr[0];
 
@@ -24,11 +23,9 @@ int main() {
     printf("\nMaximum value = %d\n", max);
     printf("Minimum value = %d\n", min);
 
-    // Bubble Sort - Ascending Order
     for (i = 0; i < 9; i++) {
         for (j = 0; j < 9 - i; j++) {
             if (arr[j] > arr[j + 1]) {
-                // Swap
                 temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
@@ -36,7 +33,6 @@ int main() {
         }
     }
 
-    // Print sorted array
     printf("\nArray in ascending order:\n");
     for (i = 0; i < 10; i++) {
         printf("%d ", arr[i]);
