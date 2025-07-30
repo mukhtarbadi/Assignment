@@ -1,22 +1,17 @@
-/*Write a C program that includes variables, constants, and comments. 
-Declare and use different data types (int, char, float) and display their values.*/
+#include <stdio.h>
 
-#include<stdio.h>			 // 1. Header file
-#include<conio.h>
+#define PI 3.1416
 
-#define PI 3.14
+int main() {
+    int age = 22;
+    float marks = 92.50;
+    char grade = 'A';
 
-void main()				 // 2. Main function
-{
-	//3. body of program
-	int age = 20;        // variable of int type
-    float marks = 85.78;     // variable of float type
-  	char grade = 'B';    // variable of char type
+    printf("Student Details:\n");
+    printf("Age     : %d years\n", age);
+    printf("Marks   : %.2f\n", marks);
+    printf("Grade   : %c\n", grade);
+    printf("PI Value: %.4f\n", PI);
 
-    printf("\n Age: %d", age);
-   	printf("\n Marks: %f", marks);
-   	printf("\n Grade: %c", grade);
-   	printf("\n PI value is: %f", PI);
-
-	getch (); // 4.end of program
+    return 0;
 }
