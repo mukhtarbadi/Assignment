@@ -1,35 +1,36 @@
-//Write a C program that defines a structure to store a student's details (name, 
-//roll number, and marks). Use an array of structures to store details of 3 
-//students and print them.
-
 #include <stdio.h>
 
-struct information {
-    int roll_no;
+// This is a program to store and print details of 3 students using structure
+
+struct Student {
     char name[50];
-    int marks;
+    int roll;
+    float marks;
 };
 
 int main() {
-    struct information i1[3];
+    struct Student s[3];
     int i;
 
+    // Taking input
     for (i = 0; i < 3; i++) {
-        printf("\nEnter Roll Number: ");
-        scanf("%d", &i1[i].roll_no);
-
-        printf("Enter Name: ");
-        scanf("%s", i1[i].name);
-
-        printf("Enter Marks: ");
-        scanf("%d", &i1[i].marks);
+        printf("Enter details of student %d:\n", i + 1);
+        printf("Name: ");
+        scanf("%s", s[i].name);
+        printf("Roll Number: ");
+        scanf("%d", &s[i].roll);
+        printf("Marks: ");
+        scanf("%f", &s[i].marks);
+        printf("\n");
     }
 
-    printf("\n----------- Student Details -----------\n");
+    // Displaying data
+    printf("Student Details:\n");
     for (i = 0; i < 3; i++) {
-        printf("\nRoll Number: %d", i1[i].roll_no);
-        printf("\nName       : %s", i1[i].name);
-        printf("\nMarks      : %d\n", i1[i].marks);
+        printf("\nStudent %d:\n", i + 1);
+        printf("Name: %s\n", s[i].name);
+        printf("Roll Number: %d\n", s[i].roll);
+        printf("Marks: %.2f\n", s[i].marks);
     }
 
     return 0;
