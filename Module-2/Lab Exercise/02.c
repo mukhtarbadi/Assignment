@@ -1,17 +1,18 @@
 #include <stdio.h>
 
-#define PI 3.1416
+// This is a program to show use of variables, constants, and data types
+
+#define YEAR 2025
 
 int main() {
-    int age = 22;
-    float marks = 92.50;
-    char grade = 'A';
+    int age = 20;
+    float height = 5.7;
+    char grade = 'B';
 
-    printf("Student Details:\n");
-    printf("Age     : %d years\n", age);
-    printf("Marks   : %.2f\n", marks);
-    printf("Grade   : %c\n", grade);
-    printf("PI Value: %.4f\n", PI);
+    printf("\nAge: %d", age);
+    printf("\nHeight: %f", height);
+    printf("\nGrade: %c", grade);
+    printf("\nYear: %d", YEAR);
 
     return 0;
 }
