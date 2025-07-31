@@ -1,34 +1,63 @@
 #include <stdio.h>
 
+// This is a program to check even/odd and display month name
+
 int main() {
-    int no, month;
+    int num, month;
 
+    // Even or Odd Check
     printf("Enter a number: ");
-    scanf("%d", &no);
+    scanf("%d", &num);
 
-    if (no % 2 == 0) {
-        printf("Even number\n");
+    if (num % 2 == 0) {
+        printf("\nThe number is Even");
     } else {
-        printf("Odd number\n");
+        printf("\nThe number is Odd");
     }
 
-    printf("Enter a number [1 to 12] to display month: ");
+    // Month name using switch
+    printf("\n\nEnter month number (1-12): ");
     scanf("%d", &month);
 
     switch (month) {
-        case 1:  printf("January\n"); break;
-        case 2:  printf("February\n"); break;
-        case 3:  printf("March\n"); break;
-        case 4:  printf("April\n"); break;
-        case 5:  printf("May\n"); break;
-        case 6:  printf("June\n"); break;
-        case 7:  printf("July\n"); break;
-        case 8:  printf("August\n"); break;
-        case 9:  printf("September\n"); break;
-        case 10: printf("October\n"); break;
-        case 11: printf("November\n"); break;
-        case 12: printf("December\n"); break;
-        default: printf("Invalid month number\n");
+        case 1:
+            printf("\nMonth: January");
+            break;
+        case 2:
+            printf("\nMonth: February");
+            break;
+        case 3:
+            printf("\nMonth: March");
+            break;
+        case 4:
+            printf("\nMonth: April");
+            break;
+        case 5:
+            printf("\nMonth: May");
+            break;
+        case 6:
+            printf("\nMonth: June");
+            break;
+        case 7:
+            printf("\nMonth: July");
+            break;
+        case 8:
+            printf("\nMonth: August");
+            break;
+        case 9:
+            printf("\nMonth: September");
+            break;
+        case 10:
+            printf("\nMonth: October");
+            break;
+        case 11:
+            printf("\nMonth: November");
+            break;
+        case 12:
+            printf("\nMonth: December");
+            break;
+        default:
+            printf("\nInvalid month number");
     }
 
     return 0;
