@@ -1,18 +1,15 @@
-//Write a C program to demonstrate pointer usage. Use a pointer to modify the value of a variable and print the result.
-
 #include <stdio.h>
 
+// This is a program to change value using a pointer
+
 int main() {
-    int no = 10;
+    int number = 10;
     int *ptr;
 
-    ptr = &no;
+    ptr = &number;      
+    *ptr = 20;         
 
-    printf("Original value: %d\n", no);
-
-    *ptr = 25;
-
-    printf("Modified value: %d\n", no);
+    printf("Updated value of number: %d", number);
 
     return 0;
 }
