@@ -1,38 +1,34 @@
 #include <stdio.h>
 
-int main() 
-{
-    int a, b;
+// This is a program to perform arithmetic, relational, and logical operations
 
-    printf("Enter the first integer: ");
-    scanf("%d", &a);
+int main() {
+    int num1, num2;
 
-    printf("Enter the second integer: ");
-    scanf("%d", &b);
+    printf("Enter first number: ");
+    scanf("%d", &num1);
 
-    printf("\n--- Arithmetic Operations ---\n");
-    printf("Addition (a + b)       = %d\n", a + b);
-    printf("Subtraction (a - b)    = %d\n", a - b);
-    printf("Multiplication (a * b) = %d\n", a * b);
-    if(b != 0) {
-        printf("Division (a / b)       = %d\n", a / b);
-        printf("Modulus (a %% b)        = %d\n", a % b);
-    } else {
-        printf("Division and modulus by zero are not allowed.\n");
-    }
+    printf("Enter second number: ");
+    scanf("%d", &num2);
 
-    printf("\n--- Relational Operations ---\n");
-    printf("a == b : %d\n", a == b);
-    printf("a != b : %d\n", a != b);
-    printf("a > b  : %d\n", a > b);
-    printf("a < b  : %d\n", a < b);
-    printf("a >= b : %d\n", a >= b);
-    printf("a <= b : %d\n", a <= b);
-
-    printf("\n--- Logical Operations ---\n");
-    printf("(a && b) : %d\n", a && b);
-    printf("(a || b) : %d\n", a || b);
-    printf("!(a)     : %d\n", !a);
+    // Arithmetic operations
+    printf("\nAdding: %d", num1 + num2);
+    printf("\nSubtracting: %d", num1 - num2);
+    printf("\nMultiplying: %d", num1 * num2);
+    printf("\nDividing: %d", num2 != 0 ? num1 / num2 : 0);
+    printf("\nModulus: %d", num2 != 0 ? num1 % num2 : 0);
+    printf("\n");
+    // Relational operations
+    printf("\nIs Equal? %d", num1 == num2);
+    printf("\nIs Not Equal? %d", num1 != num2);
+    printf("\nIs Greater? %d", num1 > num2);
+    printf("\nIs Smaller? %d", num1 < num2);
+    printf("\n");
+    // Logical operations
+    printf("\nAND Logic: %d", num1 && num2);
+    printf("\nOR Logic: %d", num1 || num2);
+    printf("\nNOT num1: %d", !num1);
+    printf("\nNOT num2: %d", !num2);
 
     return 0;
 }
