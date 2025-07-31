@@ -1,31 +1,29 @@
-/*Write a C program that calculates the factorial of a number using a function. 
-Include function declaration, definition, and call. */
-
 #include <stdio.h>
 
-int factorial(int n);
+// This is a program to calculate factorial using a function
+
+int factorial(int number); 
+
+int factorial(int number) {
+    int i, result = 1;
+    for (i = 1; i <= number; i++) {
+        result = result * i;
+    }
+    return result;
+}
 
 int main() {
-    int number, result;
+    int number, answer;
 
-    printf("Enter a positive integer: ");
+    printf("Enter a number: ");
     scanf("%d", &number);
 
-    if (number < 0) {
-        printf("Factorial is not defined for negative numbers.\n");
-    } else {
-        result = factorial(number);
-        printf("Factorial of %d is %d\n", number, result);
-    }
+    answer = factorial(number); 
+
+    printf("\nFactorial of %d is: %d", number, answer);
 
     return 0;
 }
 
-int factorial(int n) {
-    int fact = 1;
-    int i;
-    for (i = 1; i <= n; i++) {
-        fact = fact * i;
-    }
-    return fact;
-}
+
+
