@@ -8,7 +8,7 @@ int main() {
     scanf("%lf", &num1);
 
     printf("Enter an operator (+, -, *, /, %%): ");
-    scanf(" %c", &operator);  // Space to handle newline
+    scanf(" %c", &operator);  
 
     printf("Enter second number: ");
     scanf("%lf", &num2);
